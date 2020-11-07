@@ -1,0 +1,25 @@
+{
+  "name": "web-to-ssb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "common-good test && node index.js",
+    "fix": "common-good fix"
+  },
+  "author": "Christian Bundy <christianbundy@fraction.io>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "jsdom": "^16.4.0"
+  },
+  "devDependencies": {
+    "common-good": "^4.0.2",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run fix && npm run test"
+    }
+  }
+}
